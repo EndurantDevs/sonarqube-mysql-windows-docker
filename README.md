@@ -21,7 +21,7 @@ This will make you easier to add custom plugins for SonarQube like [Community C+
 # Available versions #
 
 Tag  | SonarQube Version | Base Container | Size | Source
-  ------------- | -------------  | -------------
+  ------------- | -------------  | ------------- | -------------  | -------------
   **:latest**  | 6.4 Latest | nanoserver | 2 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest)
   **:lts**  | 5.6 LTS | nanoserver | 1 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts) 
  **:latest-windowsservercore**  | 6.4 Latest | windowsservercore | 6 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
