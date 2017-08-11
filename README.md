@@ -1,4 +1,6 @@
-# Basic Info #
+Basic Info
+=========
+
 **Windows** container with [SonarQube](https://www.sonarqube.org/), Java, and MySQL as Database for SonarQube.
 It provides an easy way to run of SonarQube with sharing MySQL and SonarQube Extensions folders for more comfortable work with SonarQube.
 
@@ -17,8 +19,8 @@ Extensions Volume is need to give ability to update plugins to newer versions fo
 I recommend assigning extensions folder to a useful path on your host-machine. 
 This will make you easier to add custom plugins for SonarQube like [Community C++ Plugin](https://github.com/SonarOpenCommunity/sonar-cxx) or any other one.
 
-
-# Available versions #
+Available versions
+=========
 
 Tag  | SonarQube Version | Base Container | Size | Source
   ------------- | -------------  | ------------- | -------------  | -------------
@@ -27,7 +29,8 @@ Tag  | SonarQube Version | Base Container | Size | Source
  **:latest-windowsservercore**  | 6.4 Latest | windowsservercore | 6 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
   **:lts-windowsservercore**  | 5.6 LTS | windowsservercore | 6 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
 
-# Usage (Command Line) #
+Usage (Command Line) 
+=========
 
 ```shell
 docker pull dnikolayev/sonarqube-mysql-windows
@@ -45,7 +48,10 @@ To check configuration of the run container:
 ```shell
 docker inspect sonar
 ```
-# Usage (Visual) #
+
+Usage (Visual)
+=========
+
 * Let's try to use [Kitematic](https://kitematic.com/) to run SonarQube container. 
 ![Kinematic main screen](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/raw/master/images/kitematic.png "Kinematic")
 
@@ -60,4 +66,16 @@ docker inspect sonar
 
 * Once container loads - you will have SonarQube working. Just add extensions you need for you work.
 ![After loading container - SonarQube is getting available](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/raw/master/images/sonarqube.png "SonarQube Main Page")
+
+Notes
+=========
+
+By default, SonarQube starts via [Java Service Wrapper](https://wrapper.tanukisoftware.com/doc/english/download.jsp). This container doesn't use it and runs SonarQube via jar-file directly. 
+This was done because of the fact that nanoserver allows you to run only 64-bit applications.
+However, 64-bit version of java-wrapper uses some 32-bit libraries?!
+So, on nanoserver it just doesn't start without throwing any errors. 
+Thanks to [NanoServerApiScan utility](https://blogs.technet.microsoft.com/nanoserver/2016/04/27/nanoserverapiscan-exe-updated-for-tp5/). It gave me ability to see the source of the problem :)
+
+![64-bit Java Wrapper doesn't work on Nanoserver because of 32-bit dependencies](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/raw/master/images/java-wrapper-problem.png "64-bit Java Wrapper has 32-bit dependency which doesn't work in NanoServer")
+
 # Good luck with your code quality checks! #
