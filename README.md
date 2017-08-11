@@ -6,7 +6,8 @@ It provides an easy way to run of SonarQube with sharing MySQL and SonarQube Ext
 
 SonarQube® software (previously called Sonar) is an open source quality management platform, dedicated to continuously analyze and measure technical quality, from project portfolio to method.
 
-Containers are based on [Microsoft Nanoserver](https://hub.docker.com/r/microsoft/nanoserver/) and [OpenJDK](https://hub.docker.com/_/openjdk/). Nanoserver was used to save your resources. However, for special purposes there are versions based on [Microsoft Windowsservercore](https://hub.docker.com/r/microsoft/windowsservercore/) 
+Containers are based on [Microsoft Nanoserver](https://hub.docker.com/r/microsoft/nanoserver/) and [OpenJDK](https://hub.docker.com/_/openjdk/). Nanoserver was used to save your resources. However, for special purposes there are versions based on [Microsoft Windowsservercore](https://hub.docker.com/r/microsoft/windowsservercore/).
+
 MySQL version used: 5.7.16 
 
 Dockerfiles for builds are [shared in GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker). Files are fully windows-native, so you can customize them for your needs if you don't like a version from DockerHub.
