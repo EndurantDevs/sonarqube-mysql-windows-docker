@@ -28,8 +28,8 @@ Tag  | SonarQube Version | Base Container | Size | Source
   ------------- | -------------  | ------------- | -------------  | -------------
   **:latest**  | 6.4 Latest | nanoserver | 3.44 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest)
   **:lts**  | 5.6 LTS | nanoserver | 3.41 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts) 
- **:latest-windowsservercore**  | 6.4 Latest | windowsservercore | 6 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
-  **:lts-windowsservercore**  | 5.6 LTS | windowsservercore | 6 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
+ **:latest-windowsservercore**  | 6.4 Latest | windowsservercore | 12.7 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
+  **:lts-windowsservercore**  | 5.6 LTS | windowsservercore | 12.7 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
 
 Usage (Command Line) 
 =========
