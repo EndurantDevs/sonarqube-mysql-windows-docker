@@ -10,7 +10,8 @@ Containers are based on [Microsoft Nanoserver](https://hub.docker.com/r/microsof
 
 MySQL version used: 5.7.16 
 
-Dockerfiles for builds are [shared in GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker). Files are fully windows-native, so you can customize them for your needs if you don't like a version from DockerHub.
+Dockerfiles for builds are [shared in GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker) and [built images are available on DockerHub](https://hub.docker.com/r/dnikolayev/sonarqube-mysql-windows/). 
+Files are fully windows-native, so you can customize them for your needs if you don't like a version from DockerHub.
 
 Containers have two shared Volumes. 
 One for MySQL data and the second one is for "Extensions" folder for SonarQube. 
