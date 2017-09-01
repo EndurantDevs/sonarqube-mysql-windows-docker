@@ -1,3 +1,7 @@
+Update
+=========
+**Latest versions updated to SonarQube v6.5**
+
 Basic Info
 =========
 
@@ -26,9 +30,9 @@ Available versions
 
 Tag  | SonarQube Version | Base Container | Size | Source
   ------------- | -------------  | ------------- | -------------  | -------------
-  **:latest**  | 6.4 Latest | nanoserver | 3.44 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest)
+  **:latest**  | 6.5 Latest | nanoserver | 3.46 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest)
   **:lts**  | 5.6 LTS | nanoserver | 3.41 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts) 
- **:latest-windowsservercore**  | 6.4 Latest | windowsservercore | 12.7 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
+ **:latest-windowsservercore**  | 6.5 Latest | windowsservercore | 12.8 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
   **:lts-windowsservercore**  | 5.6 LTS | windowsservercore | 12.7 GB | [GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
 
 Usage (Command Line) 
@@ -38,6 +42,9 @@ Usage (Command Line)
 docker pull dnikolayev/sonarqube-mysql-windows
 ```
 ![Docker Pull](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/raw/master/images/docker-pull.png "Pulling container from DockerHub")
+
+**Note: On windows 10 default memory allocation is different to windows 2016 server. Please don't forget to add --memory 2g to the next command** [Discussion on GitHub](https://github.com/dnikolayev/sonarqube-mysql-windows-docker/issues/1) 
+
 ```shell
 docker run --name sonar  -it -p 9000:9000  `
 -v C:/data/mysql:C:/MySQL/data `
