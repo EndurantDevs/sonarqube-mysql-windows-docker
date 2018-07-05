@@ -11,10 +11,7 @@ docker rm -f dnikolayev/sonarqube-mysql-windows:latest
 
 $ErrorActionPreference = 'Stop';
 Write-Host Starting container
-docker run --name sonar  -it -p 9000:9000  `
--v C:/data/mysql:C:/MySQL/data `
--v C:/data/extensions:C:/sonarqube/extensions `
-dnikolayev/sonarqube-mysql-windows:latest
+docker run --name sonar  -it -p 9000:9000 dnikolayev/sonarqube-mysql-windows:latest
 Start-Sleep 10
 
 docker logs dnikolayev/sonarqube-mysql-windows:latest
