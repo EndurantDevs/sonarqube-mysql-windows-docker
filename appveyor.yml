@@ -5,6 +5,7 @@ image:
 environment:
   matrix:
     - ARCH: amd64
+  TAGS: latest;lts;latest-windowsservercore;lts-windowsservercore
   DOCKER_USER:
     secure: w2Rmx1xX/Sr8G9FYlbZdiA==
   DOCKER_PASS:
