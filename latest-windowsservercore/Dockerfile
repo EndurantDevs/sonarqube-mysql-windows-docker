@@ -11,7 +11,7 @@ RUN \
 
 RUN powershell -command \
     [Net.ServicePointManager]::SecurityProtocol = 'Tls12' ; \
-    (New-Object System.Net.WebClient).DownloadFile("https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip", "sonarqube.zip"); \
+    (New-Object System.Net.WebClient).DownloadFile("'https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip'", "'sonarqube.zip'"); \
     Expand-Archive -Path c:\sonarqube.zip -DestinationPath C:\ ; \
     Remove-Item sonarqube.zip ; \
     Rename-Item sonarqube-$env:SONARQUBE_VERSION sonarqube ; \
@@ -19,7 +19,7 @@ RUN powershell -command \
 
 RUN powershell -command \
     [Net.ServicePointManager]::SecurityProtocol = 'Tls12' ; \
-    (New-Object System.Net.WebClient).DownloadFile("https://downloads.mysql.com/archives/get/file/mysql-5.7.16-winx64.zip", "mysql.zip"); \
+    (New-Object System.Net.WebClient).DownloadFile("'https://downloads.mysql.com/archives/get/file/mysql-5.7.16-winx64.zip'", "'mysql.zip'"); \
     Expand-Archive -Path c:\mysql.zip -DestinationPath C:\ ; \
     Remove-Item mysql.zip ; \
     Rename-Item C:\mysql-5.7.16-winx64 C:\MySQL ; \
