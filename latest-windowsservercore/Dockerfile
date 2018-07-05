@@ -10,6 +10,7 @@ RUN \
     setx /M SONARQUBE_HOME C:\\sonarqube
 
 RUN powershell -command \
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ; \
     (New-Object System.Net.WebClient).DownloadFile("'https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip'", "'sonarqube.zip'"); \
     Expand-Archive -Path c:\sonarqube.zip -DestinationPath C:\ ; \
     Remove-Item sonarqube.zip ; \
