@@ -9,10 +9,10 @@ $ErrorActionPreference = 'SilentlyContinue';
 docker kill sonar
 docker rm -f sonar
 
-$ErrorActionPreference = 'Stop';
+$ErrorActionPreference = 'SilentlyContinue';
 Write-Host Starting container
 docker run --name sonar -d -p 9000:9000 dnikolayev/sonarqube-mysql-windows:latest
-Start-Sleep 20
+Start-Sleep 100
 
 docker logs sonar
 
