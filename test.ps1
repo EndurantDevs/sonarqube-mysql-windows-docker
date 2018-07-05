@@ -6,16 +6,16 @@ if ($env:ARCH -ne "amd64") {
 }
 
 $ErrorActionPreference = 'SilentlyContinue';
-docker kill dnikolayev/sonarqube-mysql-windows:latest
-docker rm -f dnikolayev/sonarqube-mysql-windows:latest
+docker kill sonar
+docker rm -f sonar
 
 $ErrorActionPreference = 'Stop';
 Write-Host Starting container
-docker run --name sonar  -it -p 9000:9000 dnikolayev/sonarqube-mysql-windows:latest
-Start-Sleep 10
+docker run --name sonar -d -p 9000:9000 dnikolayev/sonarqube-mysql-windows:latest
+Start-Sleep 20
 
-docker logs dnikolayev/sonarqube-mysql-windows:latest
+docker logs sonar
 
 $ErrorActionPreference = 'SilentlyContinue';
-docker kill dnikolayev/sonarqube-mysql-windows:latest
-docker rm -f dnikolayev/sonarqube-mysql-windows:latest
+docker kill sonar
+docker rm -f sonar
