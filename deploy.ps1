@@ -1,3 +1,10 @@
+Write-Host Preparing to deploy, logging to DockerHub
 docker login -u $env:DOCKER_USER --password-stdin $env:DOCKER_PASS
-docker push dnikolayev/sonarqube-mysql-windows:latest
+
+$tags = $env:TAGS -split ';'
+$tags |foreach {
+    docker push dnikolayev/sonarqube-mysql-windows:$_
+}
+
+Write-Host Finishing, logging out from DockerHub
 docker logout
