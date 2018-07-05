@@ -2,6 +2,9 @@ version: 1.0.{build}
 image:
 - Visual Studio 2017
 
+init:
+  - ps: '[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12'
+
 environment:
   matrix:
     - ARCH: amd64
