@@ -1,8 +1,9 @@
 Write-Host Starting test runs of docker containers
 
-if ($env:ARCH -ne "amd64") {
-  Write-Host "Arch $env:ARCH detected. Skip testing."
-  exit 0
+if ($env:ARCH -ne "amd64")
+{
+    Write-Host "Arch $env:ARCH detected. Skip testing."
+    exit 0
 }
 
 $tags = $env:TAGS -split ';'
