@@ -1,6 +1,6 @@
 Update
 =========
-**Latest versions updated to SonarQube v6.5**
+**Latest versions updated to SonarQube v6.7.1**
 
 Basic Info
 =========
