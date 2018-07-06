@@ -4,6 +4,8 @@ image:
 
 environment:
   matrix:
+    - TAG: lts-windowsservercore
+    - TAG: latest-windowsservercore
     - TAG: latest
     - TAG: lts
 
