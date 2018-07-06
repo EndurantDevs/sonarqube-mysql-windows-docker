@@ -22,7 +22,7 @@ RUN powershell -command \
                 return true;
             }
         }
-    "@ \
+    "@ ;\
     [System.Net.ServicePointManager]::CertificatePolicy = new-object IDontCarePolicy
 
 RUN powershell -command \
