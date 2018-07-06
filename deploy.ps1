@@ -1,5 +1,5 @@
 Write-Host Preparing to deploy, logging to DockerHub
-docker login -u $env:DOCKER_USER --password-stdin $env:DOCKER_PASS
+docker login -u="$env:DOCKER_USER" -p="$env:DOCKER_PASS"
 
 $tags = $env:TAGS -split ';'
 $tags |foreach {
