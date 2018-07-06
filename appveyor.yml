@@ -13,6 +13,9 @@ environment:
     secure: 1naXTmc0kovqpqIFM7CW9g==
 
 matrix:
+  allow_failures:
+    - TAG: latest
+    - TAG: lts
   fast_finish: true
 
 build_script:
