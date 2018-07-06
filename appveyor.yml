@@ -4,12 +4,17 @@ image:
 
 environment:
   matrix:
-    - ARCH: amd64
-  TAGS: lts;latest
+    - TAG: latest
+
+    - TAG: lts
+
   DOCKER_USER:
     secure: w2Rmx1xX/Sr8G9FYlbZdiA==
   DOCKER_PASS:
     secure: 1naXTmc0kovqpqIFM7CW9g==
+
+matrix:
+  fast_finish: true
 
 build_script:
   - ps: ./build.ps1
