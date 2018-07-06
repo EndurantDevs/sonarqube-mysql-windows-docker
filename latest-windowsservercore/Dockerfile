@@ -10,21 +10,7 @@ RUN \
     setx /M SONARQUBE_HOME C:\\sonarqube
 
 RUN powershell -command \
-    add-type @" \
-        using System.Net; \
-        using System.Security.Cryptography.X509Certificates; \
-        public class IDontCarePolicy : ICertificatePolicy { \
-            public IDontCarePolicy() {} \
-            public bool CheckValidationResult( \
-                ServicePoint sPoint, X509Certificate cert, \
-                WebRequest wRequest, int certProb) { \
-                return true; \
-            } \
-        } \
-    "@ ;\
-    [System.Net.ServicePointManager]::CertificatePolicy = new-object IDontCarePolicy
-
-RUN powershell -command \
+    Set-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters' -Name ServerPriorityTimeLimit -Value 0 -Type DWord ; \
     Invoke-WebRequest "https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip" -OutFile "sonarqube.zip"; \
     Expand-Archive -Path c:\sonarqube.zip -DestinationPath C:\ ; \
     Remove-Item sonarqube.zip ; \
