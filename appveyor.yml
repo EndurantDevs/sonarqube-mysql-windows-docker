@@ -16,6 +16,8 @@ environment:
 
 matrix:
   allow_failures:
+    - TAG: lts-windowsservercore
+    - TAG: latest-windowsservercore
     - TAG: latest
     - TAG: lts
   fast_finish: true
