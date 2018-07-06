@@ -5,7 +5,6 @@ image:
 environment:
   matrix:
     - TAG: latest
-
     - TAG: lts
 
   DOCKER_USER:
