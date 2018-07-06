@@ -21,8 +21,7 @@ RUN powershell -command \
     Expand-Archive -Path c:\mysql.zip -DestinationPath C:\ ; \
     Remove-Item mysql.zip ; \
     Rename-Item C:\mysql-5.7.16-winx64 C:\MySQL ; \
-    New-Item -Path C:\MySQL\data -ItemType directory ;  
-     
+    New-Item -Path C:\MySQL\data -ItemType directory ;
 
 VOLUME c:\\MySQL\\data
 

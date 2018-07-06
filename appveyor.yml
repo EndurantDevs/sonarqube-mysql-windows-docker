@@ -4,10 +4,10 @@ image:
 
 environment:
   matrix:
-    - TAG: lts-windowsservercore
-    - TAG: latest-windowsservercore
     - TAG: latest
     - TAG: lts
+    - TAG: lts-windowsservercore
+    - TAG: latest-windowsservercore
 
   DOCKER_USER:
     secure: w2Rmx1xX/Sr8G9FYlbZdiA==
@@ -18,9 +18,6 @@ matrix:
   allow_failures:
     - TAG: lts-windowsservercore
     - TAG: latest-windowsservercore
-    - TAG: latest
-    - TAG: lts
-  fast_finish: true
 
 build_script:
   - ps: ./build.ps1

@@ -10,7 +10,6 @@ RUN \
     setx /M SONARQUBE_HOME C:\\sonarqube
 
 RUN powershell -command \
-    Set-ItemProperty -path 'HKLM:\SYSTEM\CurrentControlSet\Services\Dnscache\Parameters' -Name ServerPriorityTimeLimit -Value 0 -Type DWord ; \
     Invoke-WebRequest "https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip" -OutFile "sonarqube.zip"; \
     Expand-Archive -Path c:\sonarqube.zip -DestinationPath C:\ ; \
     Remove-Item sonarqube.zip ; \
@@ -23,7 +22,6 @@ RUN powershell -command \
     Remove-Item mysql.zip ; \
     Rename-Item C:\mysql-5.7.16-winx64 C:\MySQL ; \
     New-Item -Path C:\MySQL\data -ItemType directory ;
-     
 
 VOLUME c:\\MySQL\\data
 
