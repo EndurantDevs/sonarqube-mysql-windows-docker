@@ -4,10 +4,10 @@ image:
 
 environment:
   matrix:
-    - TAG: latest
-    - TAG: lts
     - TAG: lts-windowsservercore
     - TAG: latest-windowsservercore
+    - TAG: latest
+    - TAG: lts
 
   DOCKER_USER:
     secure: w2Rmx1xX/Sr8G9FYlbZdiA==
