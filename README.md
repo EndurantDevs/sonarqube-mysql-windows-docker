@@ -1,6 +1,6 @@
 Update
 =========
-**Latest versions updated to SonarQube LTS: v6.7.1, Latest: 7.2.1 **
+**Latest versions updated to SonarQube LTS: v6.7.1, Latest: 7.2.1**
 
 Basic Info
 =========
