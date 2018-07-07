@@ -10,8 +10,9 @@ RUN \
     setx /M SONARQUBE_HOME C:\\sonarqube
 
 RUN powershell -command \
-    Write-Debug [Net.ServicePointManager]::SecurityProtocol \
-    "[Net.ServicePointManager]::SecurityProtocol = 'Ssl3', 'Tls', 'Tls11', 'Tls12'" \
+    Write-Debug [Net.ServicePointManager]::SecurityProtocol ;\
+    Write-Debug [Net.ServicePointManager]::SecurityProtocol ;\
+    [Net.ServicePointManager]::SecurityProtocol = 'Ssl3', 'Tls', 'Tls11', 'Tls12'; \
     Invoke-WebRequest "https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip" -OutFile "sonarqube.zip"; \
     Expand-Archive -Path c:\sonarqube.zip -DestinationPath C:\ ; \
     Remove-Item sonarqube.zip ; \
