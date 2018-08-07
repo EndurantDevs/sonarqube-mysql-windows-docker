@@ -3,7 +3,7 @@ FROM openjdk:nanoserver
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN \
-    setx /M SONARQUBE_VERSION '6.7.4'; \
+    setx /M SONARQUBE_VERSION '6.7.5'; \
     setx /M SONARQUBE_JDBC_URL "'jdbc:mysql://localhost:3306/sonar?useUnicode=true"&"characterEncoding=utf8"&"rewriteBatchedStatements=true"&"useConfigs=maxPerformance'" ; \
     setx /M SONARQUBE_JDBC_USERNAME 'sonar'; \
     setx /M SONARQUBE_JDBC_PASSWORD 'sonar'; \
