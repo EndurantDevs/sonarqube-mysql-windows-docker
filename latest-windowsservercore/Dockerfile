@@ -20,6 +20,9 @@ RUN powershell -command \
     Rename-Item c:\sonarqube\extensions c:\sonarqube\original_extensions
 
 RUN powershell -command \
+    Write-Debug [Net.ServicePointManager]::SecurityProtocol ;\
+    [Net.ServicePointManager]::SecurityProtocol ;\
+    [Net.ServicePointManager]::SecurityProtocol = 'Ssl3', 'Tls', 'Tls11', 'Tls12'; \
     Invoke-WebRequest "https://downloads.mysql.com/archives/get/file/mysql-5.7.16-winx64.zip" -OutFile "mysql.zip" ; \
     Expand-Archive -Path c:\mysql.zip -DestinationPath C:\ ; \
     Remove-Item mysql.zip ; \
