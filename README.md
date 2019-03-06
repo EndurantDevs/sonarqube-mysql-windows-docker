@@ -1,6 +1,6 @@
 Update
 =========
-**Latest versions updated to SonarQube LTS: v6.7.5, Latest: 7.3**
+**Latest versions updated to SonarQube LTS: v6.7.6, Latest: 7.6**
 
 Basic Info
 =========
@@ -30,10 +30,10 @@ Available versions
 
 Tag  | SonarQube Version | Base Container | Size | Source
   ------------- | -------------  | ------------- | -------------  | -------------
-  **:latest**  | 7.3 Latest | nanoserver | 3.46 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/latest)
-  **:lts**  | 6.7.5 LTS | nanoserver | 3.41 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/lts) 
- **:latest-windowsservercore**  | 7.3 Latest | windowsservercore | 12.8 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
-  **:lts-windowsservercore**  | 6.7.5 LTS | windowsservercore | 12.7 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
+  **:latest**  | 7.6 Latest | nanoserver | 3.46 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/latest)
+  **:lts**  | 6.7.6 LTS | nanoserver | 3.41 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/lts) 
+ **:latest-windowsservercore**  | 7.6 Latest | windowsservercore | 12.8 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/latest-windowsservercore)
+  **:lts-windowsservercore**  | 6.7.6 LTS | windowsservercore | 12.7 GB | [GitHub](https://github.com/EndurantDevs/sonarqube-mysql-windows-docker/tree/master/lts-windowsservercore) 
 
 Usage (Command Line) 
 =========
