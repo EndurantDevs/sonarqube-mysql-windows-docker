@@ -3,7 +3,7 @@ FROM openjdk:windowsservercore
 SHELL ["powershell", "-Command", "$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]
 
 RUN \
-    setx /M SONARQUBE_VERSION '7.3'; \
+    setx /M SONARQUBE_VERSION '7.6'; \
     setx /M SONARQUBE_JDBC_URL "'jdbc:mysql://localhost:3306/sonar?useUnicode=true"&"characterEncoding=utf8"&"rewriteBatchedStatements=true"&"useConfigs=maxPerformance'" ; \
     setx /M SONARQUBE_JDBC_USERNAME 'sonar'; \
     setx /M SONARQUBE_JDBC_PASSWORD 'sonar'; \
