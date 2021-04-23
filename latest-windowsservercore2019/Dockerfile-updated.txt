@@ -1,0 +1,11 @@
+updated few line in my docker file to build the iamge for windows server 2019
+
+
+Base Inage:
+FROM winamd64/openjdk:11.0.10-jdk-windowsservercore-1809
+
+SonarQube URL:
+Invoke-WebRequest "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-$env:SONARQUBE_VERSION.zip" -OutFile "sonarqube.zip"; \
+
+MysqlURL:
+Invoke-WebRequest "https://downloads.mysql.com/archives/get/p/23/file/mysql-5.7.16-winx64.zip" -OutFile "mysql.zip" ; \
